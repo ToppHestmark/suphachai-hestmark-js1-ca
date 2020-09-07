@@ -54,14 +54,14 @@ function createPastFlightHtml(results) {
     return launchSuccess ? `<p class="successful_message">SUCCESSFUL</p>` : `<p class="unsuccessful_message">UNSUCCESSFUL</p>`;
   }
 
-  resultsContainer.innerHTML +=  `<div class="result">
-  <img class="badge" src="${rocketBadge}" alt="">
-  <h2 class="mission__name">${missionName}</h2>
-  <p><b>Flight Number:</b> ${flightNumber}</p>
-  <p><b>Launch Date:</b> ${date}</p>
-  <p><b>Launch Site:</b> ${launchSite}</p>
-  <p><b>Rocket Name:</b> ${rocketName}</p>
-  ${successFactor()}
-  </div>`
+  resultsContainer.innerHTML +=  `<a href="details.html/" class="result">
+    <img class="badge" src="${rocketBadge}" alt="">
+    <h2 class="mission__name">${missionName}</h2>
+    <p><b>Flight Number:</b> ${flightNumber}</p>
+    <p><b>Launch Date:</b> ${date}</p>
+    <p><b>Launch Site:</b> ${launchSite}</p>
+    <p><b>Rocket Name:</b> ${rocketName}</p>
+    ${successFactor()}
+  </a>`
   });
 }
