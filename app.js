@@ -35,21 +35,21 @@ function createPastFlightHtml(results) {
 
   resultsContainer.innerHTML = "";
 
-  results.forEach(object => {
+  results.forEach(mission => {
   
-  const launchDate = object.launch_date_utc;
+  const launchDate = mission.launch_date_utc;
   const getDate = new Date(launchDate);
   const ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(getDate);
   const mo = new Intl.DateTimeFormat('en', { month: 'long' }).format(getDate);
   const da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(getDate);
 
-  const rocketBadge = object.links.mission_patch_small;
-  const missionName = object.mission_name
-  const flightNumber = object.flight_number;
+  const rocketBadge = mission.links.mission_patch_small;
+  const missionName = mission.mission_name
+  const flightNumber = mission.flight_number;
   const date = `${mo} ${da}, ${ye}`;
-  const launchSite = object.launch_site.site_name_long;
-  const rocketName = object.rocket.rocket_name;
-  const launchSuccess = object.launch_success;
+  const launchSite = mission.launch_site.site_name_long;
+  const rocketName = mission.rocket.rocket_name;
+  const launchSuccess = mission.launch_success;
   function successFactor() {
     return launchSuccess ? `<p class="successful_message">SUCCESSFUL</p>` : `<p class="unsuccessful_message">UNSUCCESSFUL</p>`;
   }
