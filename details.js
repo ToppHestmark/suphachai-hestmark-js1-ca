@@ -40,12 +40,12 @@ function createDetailsHtml(details) {
     function successFactor() {
       return launchSuccess ? `<span class="successful_message">SUCCESSFUL</span>` : `<span class="unsuccessful_message">UNSUCCESSFUL</span>`;
     }
-
+    
     detailsContainer.innerHTML = `<div class="details_result">
       <h2 class="mission_name">Mission: ${missionName}</h2>
-      <img class="background-image" src="${image}" alt="${missionName}">
+        <img src="${image}" alt="${missionName}">
+         <p class="image_text">Photo: SpaceX</p>
       <div class="text_content_container">
-      <p class="image_text">Photo: SpaceX</p>
       <p class="details_description">${detailsText}</p>
       <p><b>This mission was:</b> ${successFactor()}</p>
       <p><b>Date Launched:</b> ${dateLaunched}</p>
