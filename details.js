@@ -43,8 +43,8 @@ function createDetailsHtml(details) {
     
     detailsContainer.innerHTML = `<div class="details_result">
       <h2 class="mission_name">Mission: ${missionName}</h2>
-        <img src="${image}" alt="${missionName}">
-         <p class="image_text">Photo: SpaceX</p>
+      <img src="${image}" alt="${missionName}">
+      <p class="image_text">Photo: SpaceX</p>
       <div class="text_content_container">
       <p class="details_description">${detailsText}</p>
       <p><b>This mission was:</b> ${successFactor()}</p>
@@ -57,7 +57,7 @@ function createDetailsHtml(details) {
         <li>Payload Mass: ${payloadMass} kg</li>
         <li>Nationality: ${nationality} </li>
       <div class="links">
-        <a href="${videoLink}">VIDEO</a>
+        <a href="${videoLink}">WATCH VIDEO</a>
         <a href="index.html">BACK</a>
       </div>
       </div>
