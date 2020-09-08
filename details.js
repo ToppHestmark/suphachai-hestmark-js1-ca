@@ -28,6 +28,7 @@ function createDetailsHtml(details) {
     const missionName = details.mission_name;
     const image = details.links.flickr_images;
     const launchSite = details.launch_site.site_name_long;
+    const flightNumber = details.flight_number;
     const detailsText = details.details;
     const rocketName = details.rocket.rocket_name;
     const rocketType = details.rocket.rocket_type;
@@ -40,6 +41,10 @@ function createDetailsHtml(details) {
     function successFactor() {
       return launchSuccess ? `<span class="successful_message">SUCCESSFUL</span>` : `<span class="unsuccessful_message">UNSUCCESSFUL</span>`;
     }
+
+    if (!image) {
+      return `<p>No image</p>`
+    }
     
     detailsContainer.innerHTML = `<div class="details_result">
       <h2 class="mission_name">Mission: ${missionName}</h2>
@@ -49,6 +54,7 @@ function createDetailsHtml(details) {
       <p class="details_description">${detailsText}</p>
       <p><b>This mission was:</b> ${successFactor()}</p>
       <p><b>Date Launched:</b> ${dateLaunched}</p>
+      <p><b>Flight Number:</b> ${flightNumber}</p>
       <h2 class="mission_subheader">Mission details:</h2>
         <li>Launch Site: ${launchSite}</li>
         <li>Rocket Name: ${rocketName}</li>
