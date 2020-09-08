@@ -5,7 +5,7 @@
 body {
   padding: 20px 40px;
   font-family: sans-serif;
-  background: #ebebeb;
+  background: #fabea7;
 }
 
 .container {
@@ -15,19 +15,22 @@ body {
 
 form {
   padding: 2em;
-  background: white;
+  background: whitesmoke;
   border-radius: 1rem;
 }
 
 input {
   width: 100%;
-  margin-top: 2px;
-  padding: 10px;
-  font-size: 16px;
+  margin-top: 5px;
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  outline-width: 0;
+  background-color: #f5f1da;
 }
 
 button {
-  background: rgb(11, 91, 133);
+  background: #382933;
   border: none;
   width: 200px;
   padding: 1rem;
