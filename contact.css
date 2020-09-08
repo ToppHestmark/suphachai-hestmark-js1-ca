@@ -44,3 +44,12 @@ button {
   font-size: 0.9rem;
   margin-top: 2px;
 }
+
+.passed-validation {
+  display: none;
+  text-align: center;
+  color: #81b214;
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 10px 0px 10px 0px;
+}
