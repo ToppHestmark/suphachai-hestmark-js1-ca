@@ -13,7 +13,6 @@ async function getPastLaunches() {
     );
   }
 }
-
 getPastLaunches();
 
 function createPastFlightHtml(results) {
@@ -32,7 +31,7 @@ function createPastFlightHtml(results) {
 
   resultsContainer.innerHTML = "";
 
-  results.forEach((mission) => {
+  results.map((mission) => {
     const launchDate = mission.launch_date_utc;
     const getDate = new Date(launchDate);
     const year = new Intl.DateTimeFormat("en", { year: "numeric" }).format(
