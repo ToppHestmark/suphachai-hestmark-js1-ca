@@ -6,9 +6,9 @@ const pastLaunchContainer = document.querySelector(
 const getPastLaunches = async () => {
   try {
     const response = await fetch(url);
-    const results = await response.json();
+    const pastLaunchesResults = await response.json();
 
-    createPastLaunchesHtml(results);
+    createPastLaunchesHtml(pastLaunchesResults);
   } catch (error) {
     pastLaunchContainer.innerHTML = displayError(
       "An error occured when calling API"
@@ -17,7 +17,7 @@ const getPastLaunches = async () => {
 };
 getPastLaunches();
 
-function createPastLaunchesHtml(results) {
+function createPastLaunchesHtml(pastLaunchesResults) {
   function sortByFlightNumber(property) {
     return function (a, b) {
       if (a[property] > b[property]) {
@@ -29,11 +29,11 @@ function createPastLaunchesHtml(results) {
       return 0;
     };
   }
-  results.sort(sortByFlightNumber("flight_number"));
+  pastLaunchesResults.sort(sortByFlightNumber("flight_number"));
 
   pastLaunchContainer.innerHTML = "";
 
-  results.map((mission) => {
+  pastLaunchesResults.map((mission) => {
     const launchDate = mission.launch_date_utc;
     const getDate = new Date(launchDate);
     const year = new Intl.DateTimeFormat("en", { year: "numeric" }).format(
@@ -59,7 +59,7 @@ function createPastLaunchesHtml(results) {
         : `<p class="index__failedMessage">UNSUCCESSFUL</p>`;
     }
 
-    pastLaunchContainer.innerHTML += `<a href="./src/pages/details.html?flight_number=${flightNumber}" class="result">
+    pastLaunchContainer.innerHTML += `<a href="./src/pages/details.html?flight_number=${flightNumber}" class="index__pastLaunchesResult">
     <img class="badge" src="${rocketBadge}" alt="">
     <h2 class="mission__name">${missionName}</h2>
     <p><b>Flight#:</b> ${flightNumber}</p>

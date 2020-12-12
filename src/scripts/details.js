@@ -51,10 +51,10 @@ function createDetailsHtml(details) {
       : `<span class="details__failedMessage">UNSUCCESSFUL</span>`;
   }
 
-  detailsContainer.innerHTML = `<div class="details_card">
-      <h2 class="details__missionName">Mission: ${missionName}</h2>
+  detailsContainer.innerHTML = `
+  <h2 class="details__missionName">Mission: ${missionName}</h2>
+  <div class="details_card">
       <img src="${image}" alt="${missionName}">
-      <p class="details__imgText">Photo: SpaceX</p>
       <div class="details__textsContainer">
       <p class="details_description">${detailsText}</p>
       <p><b>This mission was:</b> ${successFactor()}</p>
