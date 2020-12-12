@@ -1,21 +1,23 @@
 const url = "https://api.spacexdata.com/v3/launches/past";
-const resultsContainer = document.querySelector(".results");
+const pastLaunchContainer = document.querySelector(
+  ".index__pastLaunchContainer"
+);
 
-async function getPastLaunches() {
+const getPastLaunches = async () => {
   try {
     const response = await fetch(url);
     const results = await response.json();
 
-    createPastFlightHtml(results);
+    createPastLaunchesHtml(results);
   } catch (error) {
-    resultsContainer.innerHTML = displayError(
+    pastLaunchContainer.innerHTML = displayError(
       "An error occured when calling API"
     );
   }
-}
+};
 getPastLaunches();
 
-function createPastFlightHtml(results) {
+function createPastLaunchesHtml(results) {
   function sortByFlightNumber(property) {
     return function (a, b) {
       if (a[property] > b[property]) {
@@ -29,7 +31,7 @@ function createPastFlightHtml(results) {
   }
   results.sort(sortByFlightNumber("flight_number"));
 
-  resultsContainer.innerHTML = "";
+  pastLaunchContainer.innerHTML = "";
 
   results.map((mission) => {
     const launchDate = mission.launch_date_utc;
@@ -53,17 +55,17 @@ function createPastFlightHtml(results) {
     const launchSuccess = mission.launch_success;
     function successFactor() {
       return launchSuccess
-        ? `<p class="successful_message">SUCCESSFUL</p>`
-        : `<p class="unsuccessful_message">UNSUCCESSFUL</p>`;
+        ? `<p class="index__successMessage">SUCCESSFUL</p>`
+        : `<p class="index__failedMessage">UNSUCCESSFUL</p>`;
     }
 
-    resultsContainer.innerHTML += `<a href="./details.html?flight_number=${flightNumber}" class="result">
+    pastLaunchContainer.innerHTML += `<a href="./src/pages/details.html?flight_number=${flightNumber}" class="result">
     <img class="badge" src="${rocketBadge}" alt="">
     <h2 class="mission__name">${missionName}</h2>
-    <p><b>Flight Number:</b> ${flightNumber}</p>
-    <p><b>Launch Date:</b> ${date}</p>
-    <p><b>Launch Site:</b> ${launchSite}</p>
-    <p><b>Rocket Name:</b> ${rocketName}</p>
+    <p><b>Flight#:</b> ${flightNumber}</p>
+    <p><b>Date:</b> ${date}</p>
+    <p><b>Site:</b> ${launchSite}</p>
+    <p><b>Rocket:</b> ${rocketName}</p>
     ${successFactor()}
   </a>`;
   });

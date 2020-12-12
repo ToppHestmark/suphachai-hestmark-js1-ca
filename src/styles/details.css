@@ -1,0 +1,85 @@
+.details__main {
+  display: flex;
+  justify-content: center;
+}
+
+.details_container {
+  width: 75%;
+  max-width: 800px;
+  background-color: white;
+}
+
+.details__missionName {
+  margin: 30px 0px 10px 0px;
+  font-size: 2rem;
+}
+
+.details_card > img {
+  width: 100%;
+}
+
+.details__textsContainer {
+  margin: 0 15px 20px 0px;
+}
+
+.details__imgText {
+  font-size: small;
+  margin: -5px 0px 20px 0px;
+}
+
+.details_description {
+  padding-bottom: 20px;
+}
+
+.details__successMessage {
+  color: #81b214;
+  font-weight: 500;
+}
+.details__failedMessage {
+  color: #dd2c00;
+  font-weight: 500;
+}
+
+.details__subHeader {
+  margin-top: 20px;
+}
+
+li {
+  margin: 5px 0px 5px 20px;
+  list-style-type: square;
+}
+
+.details__links {
+  margin: 30px 0 20px 0;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.details__links > a {
+  text-decoration: none;
+  text-align: center;
+  margin: 15px;
+  padding: 10px 51px;
+  color: white;
+  background-color: #43658b;
+}
+.details__links .backLink {
+  padding: 10px 75px;
+}
+
+@media screen and (max-width: 767px) {
+  .details__links {
+    margin: 50px 0;
+    flex-direction: column;
+  }
+  .details__links > a {
+    margin: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .details_container {
+    width: 90%;
+  }
+}

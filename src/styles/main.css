@@ -1,18 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap");
 @import url("https://use.typekit.net/xbs5fht.css");
 
-*{
+* {
   margin: 0;
   padding: 0;
   color: #323232;
   box-sizing: border-box;
-  font-family: 'Oswald', sans-serif;
-}
-
-body {
-  background-attachment: fixed;
-  background-repeat:no-repeat;
-  background-position: center;
+  font-family: "Oswald", sans-serif;
 }
 
 h1 {
@@ -23,34 +17,34 @@ h1 {
   font-size: 3rem;
   font-weight: 900;
   font-style: normal;
-  text-shadow: 1px 1px 2px grey, 0 0 0.5em grey;
-  color: #eeeeee;
+  color: rgba(0, 0, 0, 0.7);
 }
 
-.container {
+.index__main {
   width: 100%;
 }
 
-.results {
+.index__pastLaunchContainer {
   display: flex;
   justify-content: center;
   align-items: stretch;
   flex-wrap: wrap;
+  background-color: #fff;
 }
 
 .result {
   margin: 1rem;
   padding: 2rem;
   width: 320px;
-  background-color: #ffffff;
-  background: rgb(210,209,209);
-  background: radial-gradient(circle, rgba(210,209,209,0.969643753566099) 39%, rgba(219,219,227,0.4499808322177844) 100%);
   transition: transform 200ms ease-in;
   text-decoration: none;
 }
 
 .result:hover {
-  transform: scale(1.1);
+  transform: scale(1.03);
+  -webkit-box-shadow: 0px 6px 23px 0px rgba(114, 114, 114, 0.75);
+  -moz-box-shadow: 0px 6px 23px 0px rgba(114, 114, 114, 0.75);
+  box-shadow: 0px 6px 23px 0px rgba(114, 114, 114, 0.75);
 }
 
 .badge {
@@ -66,7 +60,7 @@ h1 {
   padding-top: 30px;
 }
 
-.unsuccessful_message {
+.index__failedMessage {
   padding: 10px;
   padding-bottom: 10px;
   margin-top: 25px;
@@ -75,7 +69,7 @@ h1 {
   background-color: #dd2c00;
   text-align: center;
 }
-.successful_message {
+.index__successMessage {
   padding: 10px;
   margin-top: 25px;
   margin-bottom: 25px;
@@ -83,7 +77,6 @@ h1 {
   background-color: #81b214;
   text-align: center;
 }
-
 
 .error {
   padding: 3rem;
@@ -93,39 +86,40 @@ h1 {
   margin: 0 auto;
 }
 
-.lds-facebook {
+.loader {
   display: inline-block;
   position: relative;
   width: 80px;
   height: 80px;
   margin-top: 10em;
 }
-.lds-facebook div {
+.loader div {
   display: inline-block;
   position: absolute;
   left: 8px;
   width: 16px;
   background: orange;
-  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  animation: loader 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
 }
-.lds-facebook div:nth-child(1) {
+.loader div:nth-child(1) {
   left: 8px;
   animation-delay: -0.24s;
 }
-.lds-facebook div:nth-child(2) {
+.loader div:nth-child(2) {
   left: 32px;
   animation-delay: -0.12s;
 }
-.lds-facebook div:nth-child(3) {
+.loader div:nth-child(3) {
   left: 56px;
   animation-delay: 0;
 }
-@keyframes lds-facebook {
+@keyframes loader {
   0% {
     top: 8px;
     height: 64px;
   }
-  50%, 100% {
+  50%,
+  100% {
     top: 24px;
     height: 32px;
   }

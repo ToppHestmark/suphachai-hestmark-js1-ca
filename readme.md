@@ -1,4 +1,5 @@
 # JavaScript 1 Course Assignment
+
 Level 1 is required.
 
 Level 2 is optional.
@@ -11,9 +12,9 @@ Search for a public, free-to-use API.
 
 You will need to make two calls to this API:
 
-to fetch an array of results
-to fetch a single result using an id, name or other property.
-You will need to read the API's documentation to see what URLs are available, if they require a key to be sent in the header, and any other configuration they might need.
+- to fetch an array of results
+- to fetch a single result using an id, name or other property.
+  You will need to read the API's documentation to see what URLs are available, if they require a key to be sent in the header, and any other configuration they might need.
 
 There are many free APIs discoverable by a google search.
 
@@ -25,8 +26,9 @@ The focus of the CA is on JavaScript, not styling, but as a frontend developer y
 Both API calls should include some kind of loading indicator.
 
 # Level 1
+
 - index.html
-Make a call to your API URL, loop through the results and create HTML for each result.
+  Make a call to your API URL, loop through the results and create HTML for each result.
 
 You must display at least 3 different properties inside the HTML. It's not required to display an image.
 
@@ -41,7 +43,7 @@ You will fetch this parameter from the querystring in the details page code.
 Catch any errors and display a message on the page if an error occurs.
 
 - details.html
-(Remember you will need a parameter in the querystring on this page, so either click through to it from the index page or manually add a parameter to the URL).
+  (Remember you will need a parameter in the querystring on this page, so either click through to it from the index page or manually add a parameter to the URL).
 
 Retrieve the id, name or other parameter from the query string.
 
@@ -58,7 +60,7 @@ Set the title of the HTML page to be one of the property values, like name,title
 Catch any errors and display a message on the page if an error occurs.
 
 - contact.html
-Create a form with the following inputs and validation rules.
+  Create a form with the following inputs and validation rules.
 
 Name - required
 Subject - must have a value with a minimum length of 10
@@ -67,6 +69,7 @@ Address - must have a value with a minimum length of 25
 When the form on this page is submitted, write code to validate the input. If any of the inputs fail validation display an error message for the relevant input.
 
 # Level 2
+
 contact.html
 If all validation passes, add a message above the form indicating the form passed validation.
 
@@ -75,5 +78,6 @@ Sharing APIs and copying and sharing of any code will result in your assignment 
 You may only use plain JavaScript for this assignment, no libraries or frameworks. You will be given a mark of zero if you use a library or framework for your JavaScript code.
 
 Submission:
+
 - Create a folder called your-name-js1-ca, e.g. mary-smith-js1-ca
 - Add all your code to this folder, zip the folder and submit the zip file
