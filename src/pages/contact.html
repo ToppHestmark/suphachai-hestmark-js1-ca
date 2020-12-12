@@ -8,18 +8,38 @@
       href="../../images/favicon.ico"
       type="image/x-icon"
     />
+    <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/contact.css" />
     <title>Contact</title>
   </head>
   <body>
-    <main class="container">
+    <nav class="nav">
+      <div class="nav__logo">
+        <img src="../../images/js1-logo.png" alt="Logo" />
+      </div>
+      <ul class="nav__links">
+        <li class="nav__homeLink">
+          <a href="../../index.html">Home</a>
+        </li>
+        <li class="nav__links--active">
+          <a href="./contact.html">Contact</a>
+        </li>
+      </ul>
+      <div class="nav__burger">
+        <div class="nav__burgerLine1"></div>
+        <div class="nav__burgerLine2"></div>
+        <div class="nav__burgerLine3"></div>
+      </div>
+    </nav>
+
+    <main class="contact__main">
       <div class="passed-validation" id="passedValidation">
         👊 Thank you for the comment 👊
       </div>
 
       <form id="contactForm">
         <div>
-          <input id="name" name="name" placeholder="Name (Required)" required />
+          <input id="name" name="name" placeholder="Name" required />
         </div>
 
         <div>
@@ -48,5 +68,6 @@
     </main>
 
     <script src="../scripts/contact.js"></script>
+    <script src="../app.js"></script>
   </body>
 </html>

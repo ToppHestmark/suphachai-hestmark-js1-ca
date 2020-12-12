@@ -99,13 +99,3 @@ const navbarSlideFromTheSide = () => {
   });
 };
 navbarSlideFromTheSide();
-
-window.onscroll = () => {
-  const scrollingPosition = Math.ceil(window.scrollY);
-
-  if (scrollingPosition > 100) {
-    nav.classList.add("nav--fill");
-  } else {
-    nav.classList.remove("nav--fill");
-  }
-};

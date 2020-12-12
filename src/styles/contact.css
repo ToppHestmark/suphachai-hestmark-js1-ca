@@ -3,20 +3,35 @@
 }
 
 body {
-  padding: 20px 40px;
+  padding: 0;
   font-family: sans-serif;
-  background: #fabea7;
+  background-image: url("../../images/space-background-large.jpg");
+  /* Image by Ashwini Chaudhary on Unsplash.com - URL "https://unsplash.com/photos/czPD6s3JQmk" */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-.container {
-  max-width: 760px;
-  margin: 0 auto;
+.contact__main {
+  margin-top: 10vh;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 form {
-  padding: 2em;
+  width: 80vw;
+  max-width: 760px;
+  min-width: 300px;
+  padding: 3em 2em;
   background: whitesmoke;
-  border-radius: 1rem;
+  border-radius: 3px;
+  box-shadow: 2px -1px 54px 7px rgba(235, 226, 226, 0.37);
+  -webkit-box-shadow: 2px -1px 54px 7px rgba(235, 226, 226, 0.37);
+  -moz-box-shadow: 2px -1px 54px 7px rgba(235, 226, 226, 0.37);
 }
 
 input {
@@ -26,20 +41,23 @@ input {
   font-size: 18px;
   border: none;
   outline-width: 0;
-  background-color: #f5f1da;
+  background-color: #c8cbe7;
 }
 
-button {
-  background: #382933;
+form button {
+  background: #ffcc00;
   border: none;
   width: 200px;
   padding: 1rem;
-  color: white;
+  color: #323232;
   margin-top: 10px;
   cursor: pointer;
-  border-radius: 0.2rem;
+  border-radius: 3px;
+  font-size: large;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
-
 
 .form-error {
   display: none;
@@ -51,7 +69,7 @@ button {
 .passed-validation {
   display: none;
   text-align: center;
-  color: #81b214;
+  color: rgb(233, 227, 227);
   font-size: 2rem;
   font-weight: 900;
   margin: 10px 0px 10px 0px;
