@@ -94,7 +94,7 @@ nav {
     height: 100vh;
     right: 0;
     top: 0;
-    background-color: #ffcc00;
+    background-color: #facf5a;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -202,6 +202,13 @@ nav {
   width: 320px;
   transition: transform 200ms ease-in;
   text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  .index__pastLaunchesResult {
+    margin: 0rem;
+    padding: 1rem;
+    min-width: 320px;
+  }
 }
 
 .index__pastLaunchesResult:hover {
