@@ -18,13 +18,14 @@ body::-webkit-scrollbar {
 
 nav {
   width: 100%;
-  position: fixed;
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 7vh;
-  top: 0;
-  background-color: #ffcc00;
+  margin-bottom: 7vh;
+  background-color: #facf5a;
 }
 
 .nav__logo img {
@@ -78,7 +79,7 @@ nav {
   transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
   }
@@ -177,7 +178,7 @@ nav {
   font-style: normal;
   color: rgba(0, 0, 0, 0.7);
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .index__title {
     font-size: 2rem;
   }
@@ -185,7 +186,6 @@ nav {
 
 .index__main {
   width: 100%;
-  margin-top: 10vh;
 }
 
 .index__pastLaunchContainer {
@@ -262,7 +262,7 @@ nav {
   position: absolute;
   left: 8px;
   width: 16px;
-  background: palevioletred;
+  background: #facf5a;
   animation: loader 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
 }
 .loader div:nth-child(1) {

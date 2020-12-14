@@ -10,7 +10,7 @@
 .details__main {
   display: flex;
   justify-content: center;
-  margin-top: 10vh;
+  margin-top: 5vh;
   margin-bottom: 15vh;
 }
 
@@ -84,7 +84,7 @@ li {
   padding: 10px 75px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .details_container {
     width: 85%;
   }
