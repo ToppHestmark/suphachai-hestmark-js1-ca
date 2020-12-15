@@ -26,6 +26,7 @@ nav {
   min-height: 7vh;
   margin-bottom: 7vh;
   background-color: #facf5a;
+  z-index: 5;
 }
 
 .nav__logo img {
